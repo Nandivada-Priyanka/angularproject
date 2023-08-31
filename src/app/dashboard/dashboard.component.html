@@ -1,13 +1,24 @@
-<html>
-<div>
+<mat-card>
+    <mat-card-content>
+        <h2>
+            Student DashBoard
+        </h2>
+        <table class="student-table" >
+         <tr>
+            <th><b>Name</b></th>
+            <th><b>Id</b></th>
+            <th><b>Address</b></th>
+            <th><b>PhoneNumber</b></th>
+        </tr> 
+        <tr *ngFor="let s of student">
 
-
-    <h1 style="background-color: blanchedalmond;text-align: center;">dashboard</h1>
+                <td>{{s.name}}</td>
+                <td>{{s.id}}</td>
+                <td>{{s.address}}</td>
+                <td>{{s.phoneNumber}}</td>
+            </tr>
+          
     
-    <ul>
-        <li *ngFor="let arr of Data">
-        <h3>{{arr.Technology}} discovered by {{arr.discover}}</h3>
-        </ul>
-</div>
-   
-</html>
+        </table>
+    </mat-card-content>
+</mat-card>

@@ -1,18 +1,22 @@
-<html>
-<form>
-  <div style ="text-align:center;">
+<div class="loginclass">
+  <mat-card>
+  <mat-card-content>
+      <h2 style="background-color: aqua;text-align: center;">Login Page</h2>
+      <form (ngSubmit)="login()" class="form-control">
+          <mat-form-field>
+              <input matInput placeholder="Username" [(ngModel)]="username" name="username">
+          </mat-form-field>
+          <br><br>
+                  <mat-form-field>
+              <input matInput placeholder="password" [(ngModel)]="password" name="password"><br>
+          </mat-form-field>
+          <br><br>
+          <button mat-raised-button color="primary" type="submit" style="background-color: darkgreen;text-align: center;">Login</button>
+          <br><br>
+          <br>
+      </form>
+  </mat-card-content>
+  
+  </mat-card>
+  </div>
 
-    <label for="Email Id">Enter Email Id:</label>
-    <input type="text" [(ngModel)]="EmailId" id="EmailId">
-    
-    <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
-    <br>
-    <br>
-    <label for="Password">Enter Password</label>
-    <input type="text" [(ngModel)]="password" id="password">
-    <br>
-    <br>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</div>
-</form>
-</html>
